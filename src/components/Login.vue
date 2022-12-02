@@ -22,8 +22,9 @@ export default {
     name: 'login',
     data() {
         return {
-            account: 'admin',
-            pwd: 'admin',
+            // 账号和密码
+            account: '',
+            pwd: '',
             accountError: '',
             pwdError: '',
             isShowLoading: false,
@@ -44,20 +45,22 @@ export default {
     methods: {
         verifyAccount() {
             if (this.account !== 'admin') {
-                this.accountError = '账号为admin'
+                this.accountError = '请输入账号'
             } else {
                 this.accountError = ''
             }
         },
         verifyPwd() {
             if (this.pwd !== 'admin') {
-                this.pwdError = '密码为admin'
+                this.pwdError = '请输入密码'
             } else {
                 this.pwdError = ''
             }
         },
+        // 跳转到注册页面
         register() {
-
+            localStorage.setItem('token', '1')
+            this.$router.push({ path: 'register' })
         },
         forgetPwd() {
 
@@ -68,9 +71,12 @@ export default {
                 // 登陆成功 设置用户信息
                 localStorage.setItem('userImg', 'https://avatars3.githubusercontent.com/u/22117876?s=460&v=4')
                 localStorage.setItem('userName', '小明')
-                // 登陆成功 假设这里是后台返回的 token
+                // 登陆成功 假设这里是后台返回的 token ---> 存储token
                 localStorage.setItem('token', 'i_am_token')
                 this.$router.push({ path: this.redirect || '/' })
+                console.log(this.$route);
+                console.log(this.redirect);
+                console.log(this.path);
             } else {
                 if (this.account !== 'admin') {
                     this.accountError = '账号为admin'

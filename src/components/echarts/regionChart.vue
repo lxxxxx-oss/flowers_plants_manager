@@ -9,7 +9,6 @@
   // 需要展示哪个地区的地图，将它的JSON文件引用到这里即可，这里展示的是新疆的地图
   const regionJson = require("../../../src/assets/echarts/xinJiang.json") 
   export default {
-      name: 'dp',
       data(){
           return{
           }

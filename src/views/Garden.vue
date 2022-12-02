@@ -72,11 +72,10 @@
       name: 'garden',
       data() {
           return {
-            
           }
       },
       components: {
-        lineChart
+        lineChart,
       },
               
   }

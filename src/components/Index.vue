@@ -203,7 +203,6 @@ export default {
         keepAliveData() {
             return this.tagsArry.map(item => item.name)
         },
-        // 由于iView的导航菜单比较坑 只能设定一个name参数
         // 所以需要在这定义组件名称和标签栏标题的映射表 有多少个页面就有多少个映射条数
         nameToTitle() {
             const obj = {}
@@ -215,6 +214,7 @@ export default {
         },
     },
     methods: {
+        // 获取菜单
         getMenus(name) {
             let menus
             const tagTitle = this.nameToTitle[name]
