@@ -90,7 +90,8 @@
   width: 98%;
   margin: 10px;
   padding: 10px;
-  background: #fff;    
+  background: #fff; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)
 }
 .layout{
   border-radius: 4px;
@@ -126,7 +127,7 @@
   color: black;
   border: 1px solid #cecece;
   border-radius: 5px;
-  box-shadow: 0 1px 0 0 #cecece;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)
 }
 .item-card img {
   height: 230px;
@@ -156,7 +157,7 @@
   background: #fff;
   color: black;
   border: 1px solid #cecece;
-  box-shadow: 0 1px 0 0 #cecece;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)
 }
 .title {
   font-size: 20px;
@@ -176,7 +177,7 @@
   background: #fff;
   color: black;
   border: 1px solid #cecece;
-  box-shadow: 0 1px 0 0 #cecece;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)
 }
 
 </style>

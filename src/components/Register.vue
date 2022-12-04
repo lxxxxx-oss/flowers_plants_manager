@@ -17,9 +17,15 @@
           <el-form-item prop="tel">
             <el-input v-model="ruleForm2.tel" auto-complete="off" placeholder="请输入手机号"></el-input>
           </el-form-item>
-          <el-form-item prop="smscode" class="code">
+          <!-- <el-form-item prop="smscode" class="code">
             <el-input v-model="ruleForm2.smscode" placeholder="验证码"></el-input>
             <el-button type="primary" :disabled='isDisabled' @click="sendCode">{{buttonText}}</el-button>
+          </el-form-item> -->
+          <el-form-item prop="privilege">
+            <el-select v-model="ruleForm2.privilege" auto-complete="off" placeholder="请选择您的权限" style="width: 260px;">
+              <el-option label="管理员"></el-option>
+              <el-option label="普通用户"></el-option>
+            </el-select>
           </el-form-item>
           <el-form-item prop="pass">
             <el-input type="password" v-model="ruleForm2.pass" auto-complete="off" placeholder="输入密码"></el-input>
@@ -46,6 +52,14 @@ export default {
     let checkName = (rule, value, callback) => {
       if (value === '') {
         callback(new Error('请输入用户名'))
+      }  else {
+        callback()
+      }
+    }
+    // 验证是否选择了用户权限
+    let checkPrivilege = (rule, value, callback) => {
+      if (value === '') {
+        callback(new Error('请选择您的权限'))
       }  else {
         callback()
       }
@@ -92,6 +106,7 @@ export default {
     return {  
       ruleForm2: {
         name: "",
+        privilege: "",
         pass: "",
         checkPass: "",
         tel: "",
@@ -99,6 +114,7 @@ export default {
       },
       rules2: {
         name: [{ validator: checkName, trigger: 'change' }],
+        privilege: [{ validator: checkPrivilege, trigger: 'change' }],
         pass: [{ validator: validatePass, trigger: 'change' }],
         checkPass: [{ validator: validatePass2, trigger: 'change' }],
         tel: [{ validator: checkTel, trigger: 'change' }],
