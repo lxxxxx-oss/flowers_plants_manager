@@ -51,11 +51,11 @@ export const asyncRoutes = {
         meta: { title: '品牌宣传' },
         component: () => import('../views/Publicity.vue'),
     },
-    retrospect: {
-        path: 'retrospect',
-        name: 'retrospect',
-        meta: { title: '产品追溯' },
-        component: () => import('../views/Retrospect.vue'),
+    proposal: {
+        path: 'proposal',
+        name: 'proposal',
+        meta: { title: '种植建议' },
+        component: () => import('../views/Proposal.vue'),
     },
     bigdata: {
         path: 'bigdata',
@@ -68,6 +68,12 @@ export const asyncRoutes = {
         name: 'consult',
         meta: { title: '专家咨询' },
         component: () => import('../views/Consult.vue'),
+    },
+    admin: {
+        path: 'admin',
+        name: 'admin',
+        meta: { title: '系统管理' },
+        component: () => import('../views/Admin.vue'),
     },
     t1: {
         path: 't1',

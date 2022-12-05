@@ -33,10 +33,10 @@ const store = new Vuex.Store({
                 text: '品牌宣传',
             },
             {
-                name: 'retrospect',
+                name: 'proposal',
                 size: 18,
-                type: 'ios-arrow-dropup',
-                text: '产品追溯',
+                type: 'ios-color-fill-outline',
+                text: '种植建议',
             },
             {
                 name: 'bigdata',
@@ -49,6 +49,12 @@ const store = new Vuex.Store({
                 size: 18,
                 type: 'ios-bulb-outline',
                 text: '专家咨询',
+            },
+            {
+                name: 'admin',
+                size: 18,
+                type: 'ios-cog-outline',
+                text: '系统管理',
             },
 
             // {
