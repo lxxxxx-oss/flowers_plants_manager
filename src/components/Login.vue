@@ -23,8 +23,8 @@ export default {
     data() {
         return {
             // 账号和密码
-            account: '',
-            pwd: '',
+            account: 'admin',
+            pwd: 'admin',
             accountError: '',
             pwdError: '',
             isShowLoading: false,
@@ -68,11 +68,13 @@ export default {
         submit() {
             if (this.account === 'admin' && this.pwd === 'admin') {
                 this.isShowLoading = true
-                // 登陆成功 设置用户信息
+                localStorage.setItem('token', 'i_am_token')
                 localStorage.setItem('userImg', 'https://avatars3.githubusercontent.com/u/22117876?s=460&v=4')
                 localStorage.setItem('userName', '小明')
-                // 登陆成功 假设这里是后台返回的 token ---> 存储token
-                localStorage.setItem('token', 'i_am_token')
+                // 这里应该调用接口，将用户信息传给后端，后端查到用户的角色,类似于:
+                // axios.post('/temp',this.formModel).then(res=>{})      
+                let getUserRole = this.account === 'admin' ? 'admin' : 'user'
+                localStorage.setItem('userRole', getUserRole)
                 this.$router.push({ path: this.redirect || '/' })
                 console.log(this.$route);
                 console.log(this.redirect);

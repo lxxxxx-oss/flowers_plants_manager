@@ -5,22 +5,24 @@
       :action="uploadActionUrl"
       :on-preview="handlePreview"
       :on-success="uploadSuccess"
+      :file-list="fileList"
       list-type="picture">
       <el-button size="small" type="primary">点击上传</el-button>
     </el-upload>
     <!-- 渲染准备上传的图片信息 -->
-    <div class="image-preview transition-box" v-for="val, index in fileList" :key="(index | val.name)">
-      <img :src="val.url" />
+    <!-- <div class="image-preview transition-box" v-for="val, index in fileList" :key="(index | val.name)">
+      <img :src="val.url" /> -->
       <!-- <div>{{index}}</div> -->
-      <div class="imgInfo">
+      <!-- <div class="imgInfo">
         <p>{{val.name}}</p>
         <p v-if="val.result == null">{{val.result}}</p>
       </div>
       <span class="el-icon-close deletaImg" @click="deleteImg"></span>
-    </div>
+    </div> -->
     <el-button class="submitUpload" size="small" type="success" @click="submitUpload">上传到服务器</el-button>
   </div>
 </template>
+
 <script>
   export default {
     data() {

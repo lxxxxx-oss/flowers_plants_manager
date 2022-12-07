@@ -21,16 +21,16 @@ const store = new Vuex.Store({
                 text: '园区详情',
             },
             {
+                name: 'exhibition',
+                size: 18,
+                type: 'ios-eye-outline',
+                text: '花卉展示',
+            },
+            {
                 name: 'recognition',
                 size: 18,
                 type: 'ios-aperture-outline',
                 text: '花卉识别',
-            },
-            {
-                name: 'publicity',
-                size: 18,
-                type: 'ios-rose-outline',
-                text: '品牌宣传',
             },
             {
                 name: 'proposal',
@@ -45,10 +45,10 @@ const store = new Vuex.Store({
                 text: '大数据中心',
             },
             {
-                name: 'consult',
+                name: 'monitor',
                 size: 18,
-                type: 'ios-bulb-outline',
-                text: '专家咨询',
+                type: 'ios-alarm-outline',
+                text: '花卉监测',
             },
             {
                 name: 'admin',
