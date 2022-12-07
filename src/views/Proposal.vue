@@ -11,13 +11,14 @@
     <div class="proposal">
       <div>种植建议</div>
       <!-- 接收到了信息则对信息进行展示 -->
-      <div class="plantInfo" v-if="plantProposal">
-        <div>您所在地区的地理环境特点</div>
-        <div>适合种植的植物</div>
+      <div class="plantInfo" style="color: black" v-if="lng && lat">
+        <div>您所在地区的地理环境特点：<span class="plantInfo">疏松、肥沃的沙质壤土</span></div>
+        <el-divider></el-divider>
+        <div>适合种植的植物：<span class="plantInfo">风信子、金樱子、栀子花</span></div>
         <el-divider></el-divider>
       </div>
       <!-- 还未接收到后端信息时的提示信息 -->
-      <div class="plantInfo" else>
+      <div class="plantInfo" v-if="!(lng && lat)">
         <div>您还未上传您的位置信息哦！</div>
         <el-divider></el-divider>
       </div>
